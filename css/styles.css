@@ -1,0 +1,241 @@
+:root{
+ --green: #007522;
+ --red: #c62828;
+ --white: #FFFFFF;
+ --black: #000000;
+ --dark: #333445;
+}
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    background-color: var(--white);
+    color: var(--dark);
+}
+
+/* ================= HEADER ================= */
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.logo {
+    max-width: 200px;
+    margin-bottom: 10px;
+}
+
+/* ================= NAVIGATION ================= */
+
+nav {
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--green);
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+/* Hide checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--green);
+}
+h1 {
+    font-family: 'Playball', cursive;
+    text-align: center;
+    font-size: 3.2rem;
+    margin: 25px 0;
+    color: var(--green);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* ================= HERO SECTION ================= */
+
+#container1 {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Blurred Background */
+#container1::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../images/travel.jpg") center/cover no-repeat;
+    filter: blur(6px) brightness(1.1);
+    transform: scale(1.1);
+    z-index: -1;
+}
+/* Dark overlay for readability */
+
+#row2,
+#row3 {
+    width: 250px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+#row2::before,
+#row3::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+}
+
+#row2::before {
+    background-image: url("../images/pasta.jpg");
+}
+
+#row3::before {
+    background-image: url("../images/pizza.jpg");
+}
+
+/* ================= BUTTON ================= */
+
+.btn {
+    border: 3px solid var(--white);
+    border-radius: 12px;
+    background-color: var(--green);
+    color: var(--white);
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--red);
+}
+
+/* ================= IMAGE GALLERY ================= */
+
+.food-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.food-gallery img {
+    width: 250px;
+    border-radius: 20px;
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.4));
+    transition: transform 0.3s ease;
+}
+
+.food-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #f5f5f5;
+}
+
+.social-icon {
+    width: 40px;
+    margin: 0 8px;
+    vertical-align: middle;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    /* Hamburger shows */
+    .hamburger {
+        display: block;
+        margin: 10px auto;
+    }
+
+    /* Hide nav links */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Show when checked */
+    #menu-toggle:checked + .hamburger + .nav-links {
+        display: flex;
+    }
+
+    /* Stack hero content */
+    #container1 {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 0;
+    }
+
+    #row2,
+    #row3 {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
