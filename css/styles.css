@@ -6,7 +6,7 @@
  --dark: #333445;
 }
 
-/* ================= RESET ================= */
+
 
 * {
     margin: 0;
@@ -14,7 +14,7 @@
     box-sizing: border-box;
 }
 
-/* ================= BODY ================= */
+
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -36,7 +36,7 @@ header {
     margin-bottom: 10px;
 }
 
-/* ================= NAVIGATION ================= */
+
 
 nav {
     position: relative;
@@ -65,12 +65,11 @@ nav a:focus {
     color: var(--white);
 }
 
-/* Hide checkbox */
 #menu-toggle {
     display: none;
 }
 
-/* Hamburger */
+
 .hamburger {
     display: none;
     font-size: 28px;
@@ -86,7 +85,7 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
-/* ================= HERO SECTION ================= */
+
 
 #container1 {
     position: relative;
@@ -100,7 +99,7 @@ h1 {
     overflow: hidden;
 }
 
-/* Blurred Background */
+
 #container1::before {
     content: "";
     position: absolute;
@@ -110,7 +109,7 @@ h1 {
     transform: scale(1.1);
     z-index: -1;
 }
-/* Dark overlay for readability */
+
 
 #row2,
 #row3 {
@@ -144,7 +143,7 @@ h1 {
     background-image: url("../images/pizza.jpg");
 }
 
-/* ================= BUTTON ================= */
+
 
 .btn {
     border: 3px solid var(--white);
@@ -162,7 +161,7 @@ h1 {
     background-color: var(--red);
 }
 
-/* ================= IMAGE GALLERY ================= */
+
 
 .food-gallery {
     display: flex;
@@ -183,7 +182,7 @@ h1 {
     transform: scale(1.05);
 }
 
-/* ================= FOOTER ================= */
+
 
 footer {
     text-align: center;
@@ -198,7 +197,7 @@ footer {
     vertical-align: middle;
 }
 
-/* ================= RESPONSIVE ================= */
+
 
 @media (max-width: 768px) {
 
@@ -221,12 +220,12 @@ footer {
         margin: 10px 0;
     }
 
-    /* Show when checked */
+    
     #menu-toggle:checked + .hamburger + .nav-links {
         display: flex;
     }
 
-    /* Stack hero content */
+   
     #container1 {
         flex-direction: column;
         height: auto;
